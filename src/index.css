@@ -1,0 +1,67 @@
+body {
+    background: linear-gradient(180deg, rgba(19, 77, 89, 1) 15%, rgba(29, 119, 138, 1) 100%);
+    min-height: 100vh;
+    margin: 10px;
+    margin-left: 40px;
+}
+
+h1 {
+    color: aliceblue;
+}
+
+h2 {
+    color: aliceblue;
+    opacity: 90%;
+}
+
+h3 {
+    color: aliceblue;
+    opacity: 80%;
+}
+
+p {
+    color: aliceblue;
+    opacity: 70%;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#divFotoHome {
+    width: 40%;
+    float: right;
+}
+
+#fotoHome {
+    max-height: 420px;
+}
+
+.borderGreen {
+    border: 2px solid #1d778a;
+    border-radius: 0.5em;
+}
+
+#imgVragen {
+    max-height: 300px;
+}
+
+.left {
+    width: 80%;
+    text-align: left;
+    float: left;
+}
+
+.right {
+    width: 80%;
+    text-align: right;
+    float: right;
+}
+
+@media (max-width: 600px) {
+    .left,
+    .right {
+        width: 100%;
+    }
+}
