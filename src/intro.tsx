@@ -5,6 +5,11 @@ const ContainerHalf = styled.div`
     width: 50%;
     float: left;
     margin-top: 70px;
+
+    @media (max-width: 600px) {
+        width: 100%;
+        margin-top: 10px;
+      }
 `
 
 

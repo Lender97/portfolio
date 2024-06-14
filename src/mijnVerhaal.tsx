@@ -4,8 +4,8 @@ import {FunctionComponent} from 'react'
 const MijnVerhaal: FunctionComponent = () => {
     return (
         <div className='container'>
-            <div className='left'>
-        <h1>
+        <div className='left'>
+        <h1 id='pad-0'>
             Van student naar professional.
         </h1>
         </div>

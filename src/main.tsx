@@ -5,15 +5,17 @@ import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 import NavBar from './navBar'
 import Routing from './routing'
+import Footer from './footer'
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
       <BrowserRouter>
-      <div>
+      <>
             <NavBar/>
             <Routing />
-      </div>
+            <Footer />
+      </>
       </BrowserRouter>
   </React.StrictMode>,
 )

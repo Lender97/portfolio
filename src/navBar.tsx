@@ -1,46 +1,35 @@
-import styled from 'styled-components'
 import {FunctionComponent} from 'react'
 
-const NavContainer = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 100px;
-  min-height: 130px;
-`
-
-const NavUL = styled.ul`
-  list-style: none;
-  padding: 20px;
-  margin-top: 20px;
-`
-
-const NavLi = styled.li`
-  display: inline-block;
-  cursor: pointer;
-  box-sizing: border-box;
-  border: 2px solid transparent;
-  margin-left: 10px;
-  padding: 3px;
-
-  &:hover {
-    border: 2px solid #1d778a;
-    border-radius: 0.25em;
-  }
-`
 
 const NavBar: FunctionComponent = () => {
 
+  function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')!;
+    sidebar.className = "sidebar flex";
+  }
+  function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')!;
+    sidebar.className += "sidebar hide";
+  }
+
     return (
         <header>
-         <NavContainer>
-                <NavUL>
-                    <NavLi><a href={'/'}>Home</a></NavLi>
-                    <NavLi><a href={'/mijnVerhaal'}>Mijn verhaal</a></NavLi>
-                    <NavLi><a href={'/projecten'}>Projecten</a></NavLi>
-                    <NavLi><a href={'/contact'}>Contact</a></NavLi>
-                    <NavLi><a href={'/pageNotFound'}>404</a></NavLi>
-                </NavUL>
-        </NavContainer>
+         <nav>
+          <ul className='sidebar'>
+                    <li onClick={hideSidebar}><a href="#"><svg xmlns="http://www.w3.org/2000/svg" className='hamburgerIcon' height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+                    <li><a href={'/'}>Home</a></li>
+                    <li><a href={'/mijnVerhaal'}>Mijn verhaal</a></li>
+                    <li><a href={'/projecten'}>Projecten</a></li>
+                    <li><a href={'/contact'}>Contact</a></li>
+          </ul>
+          <ul>
+                    <li className='hideOnMobile'><a href={'/'}>Home</a></li>
+                    <li className='hideOnMobile'><a href={'/mijnVerhaal'}>Mijn verhaal</a></li>
+                    <li className='hideOnMobile'><a href={'/projecten'}>Projecten</a></li>
+                    <li className='hideOnMobile'><a href={'/contact'}>Contact</a></li>
+                    <li className='menu-button' onClick={showSidebar}><a href="#"><svg xmlns="http://www.w3.org/2000/svg" className='hamburgerIcon' height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+          </ul>
+        </nav>
         </header>
     )
 }

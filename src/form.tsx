@@ -29,6 +29,7 @@ const Form: FunctionComponent = () => {
   };
 
   return (
+    <div className="flex-left">
     <form onSubmit={handleSubmit(onSubmit)} className='borderGreen p-3'>
       <div>
         <p>Naam</p>
@@ -49,13 +50,14 @@ const Form: FunctionComponent = () => {
       </div>
 
       <div>
-        <p>Vraag</p>
+        <p>Bericht</p>
         <textarea id="vraag" {...register('vraag')} />
         {errors.vraag && <p>{errors.vraag.message}</p>}
       </div>
 
       <button type="submit" className='btn btn-primary'>Verzenden</button>
     </form>
+    </div>
   );
 }
 
